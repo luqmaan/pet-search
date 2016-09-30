@@ -85,37 +85,37 @@ export default class IntakesTable extends Component {
         <Column
           header={<Cell>DateTime</Cell>}
           cell={<MomentDateCell data={dataList} col="datetime" />}
-          width={100}
+          width={120}
         />
         <Column
           header={<Cell>Found Location</Cell>}
           cell={<TextCell data={dataList} col="found_location" />}
-          width={200}
+          width={250}
         />
         <Column
           header={<Cell>Intake Type</Cell>}
           cell={<TextCell data={dataList} col="intake_type" />}
-          width={200}
+          width={150}
         />
         <Column
           header={<Cell>Intake Condition</Cell>}
           cell={<TextCell data={dataList} col="intake_condition" />}
-          width={200}
+          width={100}
         />
         <Column
           header={<Cell>Animal Type</Cell>}
           cell={<TextCell data={dataList} col="animal_type" />}
-          width={200}
+          width={75}
         />
         <Column
           header={<Cell>Sex upon Intake</Cell>}
           cell={<TextCell data={dataList} col="sex_upon_intake" />}
-          width={200}
+          width={100}
         />
         <Column
           header={<Cell>Age upon Intake</Cell>}
           cell={<TextCell data={dataList} col="age_upon_intake" />}
-          width={200}
+          width={100}
         />
         <Column
           header={<Cell>Breed</Cell>}
@@ -125,7 +125,7 @@ export default class IntakesTable extends Component {
         <Column
           header={<Cell>Color</Cell>}
           cell={<TextCell data={dataList} col="color" />}
-          width={200}
+          width={150}
         />
       </Table>
     );
