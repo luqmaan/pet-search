@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-
 import moment from 'moment';
 
-import Intake from'./Intake';
+import './data.css';
+
+import IntakesTable from'./IntakesTable';
 
 class App extends Component {
 
@@ -21,24 +22,32 @@ class App extends Component {
   loadIntakes = () => {
     const start = moment().subtract(15, 'days').format('YYYY-MM-DD');
     const end = moment().format('YYYY-MM-DD');
-    const url = `https://data.austintexas.gov/resource/fdzn-9yqv.json?$query=SELECT * WHERE datetime BETWEEN '${start}' and '${end}' ORDER BY datetime ASC LIMIT 10`;
+    const query = `SELECT *
+      WHERE datetime BETWEEN '${start}' and '${end}'
+      ORDER BY datetime DESC
+      LIMIT 100
+    `;
+
+    const url = `https://data.austintexas.gov/resource/fdzn-9yqv.json?$query=${query}`;
 
     fetch(url)
       .then(res => res.json())
-      .then((data) => this.setState({intakes: data}));
+      .then((data) => {
+        if (data.error) {
+          console.error(data)
+          throw new Error(data.message);
+        }
+
+        this.setState({intakes: data})
+      });
   }
 
   render() {
+    // {this.state.intakes && this.state.intakes.map((intake) => <Intake intake={intake} key={intake.animal_id}/>)}
+
     return (
       <div>
-        <div>
-          <h2>Pet Search</h2>
-
-          <button onClick={this.loadIntakes}>Search</button>
-          <div>
-            {this.state.intakes && this.state.intakes.map((intake) => <Intake intake={intake} key={intake.animal_id}/>)}
-          </div>
-        </div>
+          <IntakesTable dataList={this.state.intakes} />
       </div>
     );
   }
