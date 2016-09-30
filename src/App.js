@@ -25,7 +25,6 @@ class App extends Component {
     const query = `SELECT *
       WHERE datetime BETWEEN '${start}' and '${end}'
       ORDER BY datetime DESC
-      LIMIT 100
     `;
 
     const url = `https://data.austintexas.gov/resource/fdzn-9yqv.json?$query=${query}`;
