@@ -23,7 +23,6 @@ class App extends Component {
     const start = moment().subtract(15, 'days').format('YYYY-MM-DD');
     const end = moment().format('YYYY-MM-DD');
     const query = `SELECT *
-      WHERE datetime BETWEEN '${start}' and '${end}'
       ORDER BY datetime DESC
     `;
 
