@@ -1,54 +1,54 @@
 import React, { Component } from 'react';
-import moment from 'moment';
 
-import './data.css';
+import 'react-select/dist/react-select.css';
+import './App.css';
 
-import IntakesTable from'./IntakesTable';
+import {parseResponse} from './helpers/api';
 
-class App extends Component {
+import Filters from './Filters';
+// import Intake from './Intake';
+
+export default class App extends Component {
 
   constructor(props) {
     super(props);
 
     this.state = {
       intakes: [],
+      currentFilters: [],
     };
   }
 
   componentDidMount() {
-    this.loadIntakes();
+    // this.loadIntakes();
+  }
+
+  setCurrentFilters = (filters) => {
+    this.setState({currentFilters: filters});
   }
 
   loadIntakes = () => {
-    const start = moment().subtract(15, 'days').format('YYYY-MM-DD');
-    const end = moment().format('YYYY-MM-DD');
     const query = `SELECT *
       ORDER BY datetime DESC
+      LIMIT 10
     `;
 
     const url = `https://data.austintexas.gov/resource/fdzn-9yqv.json?$query=${query}`;
 
     fetch(url)
-      .then(res => res.json())
+      .then((res) => parseResponse(res))
       .then((data) => {
-        if (data.error) {
-          console.error(data)
-          throw new Error(data.message);
-        }
-
         this.setState({intakes: data})
       });
   }
 
   render() {
-    // {this.state.intakes && this.state.intakes.map((intake) => <Intake intake={intake} key={intake.animal_id}/>)}
-
     return (
-      <div>
-          <IntakesTable dataList={this.state.intakes} />
+      <div className="app">
+        <h1>Animal Intakes</h1>
+        <Filters currentFilters={this.state.currentFilters} setCurrentFilters={this.setCurrentFilters} />
+        {/*this.state.intakes && this.state.intakes.map((intake) => <Intake intake={intake} key={intake.animal_id}/>)*/}
       </div>
     );
   }
 }
-
-export default App;
