@@ -41,7 +41,7 @@ export default class OptionsSelect extends Component {
   render() {
     return (
       <Select.Async
-        key={this.props.field}
+        key={this.props.field} /* Need this to prevent caching */
         loadOptions={this.loadOptions}
         value={this.state.value}
         onChange={this.onChange}
