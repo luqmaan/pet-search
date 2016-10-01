@@ -1,13 +1,10 @@
 import React, {Component} from 'react';
-import Select from 'react-select';
 import {ButtonCircle, Button} from 'rebass';
 import Icon from 'react-geomicons';
 
-import {IntakeFields} from '../../Constants';
-
-import SearchField from './SearchField';
-import ConditionSelect from './ConditionSelect';
-import OptionsSelect from './OptionsSelect';
+import SearchFieldSelect from './SearchFieldSelect';
+import SearchConditionSelect from './SearchConditionSelect';
+import SearchValueSelect from './SearchValueSelect';
 
 import './SearchItem.css';
 
@@ -16,20 +13,40 @@ export default class SearchItem extends Component {
     super(props);
 
     this.state = {
-      field: 'animal_type',
+      searchField: 'animal_type',
+      searchCondition: 'is',
+      searchValue: null,
     };
   }
 
-  setField = (field) => {
-    this.setState({field});
+  setSearchField = (searchField) => {
+    this.setState({searchField});
+  }
+
+  setSearchCondition = (searchCondition) => {
+    this.setState({searchCondition});
+  }
+
+  setSearchValue = (searchValue) => {
+    this.setState({searchValue});
   }
 
   render() {
     return (
       <div className="search-item">
-        <SearchField field={this.state.field} onChange={this.setField} />
-        <ConditionSelect field={this.state.field} />
-        <OptionsSelect field={this.state.field} />
+        <SearchFieldSelect
+          searchField={this.state.searchField}
+          onChange={this.setSearchField}
+        />
+        <SearchConditionSelect
+          searchCondition={this.state.searchCondition}
+          onChange={this.setSearchCondition}
+        />
+        <SearchValueSelect
+          searchField={this.state.searchField}
+          searchValue={this.state.searchValue}
+          onChange={this.setSearchValue}
+        />
         <Button title="And" pill style={{marginRight: 10}}>And</Button>
         <ButtonCircle title="Delete" color="midgray" backgroundColor="gray" pill>
           <Icon name="trash" />

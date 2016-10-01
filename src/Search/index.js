@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import Select from 'react-select';
 
 import SearchItem from './SearchItem';
 
@@ -19,6 +18,7 @@ export default class Search extends Component {
   render() {
     return (
       <div className="search-container">
+        <SearchItem />
         <SearchItem />
       </div>
     );
