@@ -40,13 +40,15 @@ export default class OptionsSelect extends Component {
 
   render() {
     return (
-      <Select.Async
-        key={this.props.field} /* Need this to prevent caching */
-        loadOptions={this.loadOptions}
-        value={this.state.value}
-        onChange={this.onChange}
-        cache={false}
-      />
+      <div className="search-input" style={{flex: 1, minWidth: 200}}>
+        <Select.Async
+          key={this.props.field} /* Need this to prevent caching */
+          loadOptions={this.loadOptions}
+          value={this.state.value}
+          onChange={this.onChange}
+          cache={false}
+        />
+      </div>
     );
   }
 

@@ -20,7 +20,7 @@ export default class FieldSelect extends Component {
 
   render() {
     return (
-      <div>
+      <div className="search-input" style={{minWidth: 150}}>
         <Select
           options={options}
           value={this.state.value}

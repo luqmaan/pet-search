@@ -5,7 +5,7 @@ import './App.css';
 
 import {parseResponse} from './helpers/api';
 
-import Filters from './Filters';
+import Search from './Search';
 // import Intake from './Intake';
 
 export default class App extends Component {
@@ -46,7 +46,7 @@ export default class App extends Component {
     return (
       <div className="app">
         <h1>Animal Intakes</h1>
-        <Filters currentFilters={this.state.currentFilters} setCurrentFilters={this.setCurrentFilters} />
+        <Search currentFilters={this.state.currentFilters} setCurrentFilters={this.setCurrentFilters} />
         {/*this.state.intakes && this.state.intakes.map((intake) => <Intake intake={intake} key={intake.animal_id}/>)*/}
       </div>
     );

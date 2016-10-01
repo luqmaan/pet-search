@@ -3,7 +3,9 @@ import Select from 'react-select';
 
 import SearchItem from './SearchItem';
 
-export default class Filters extends Component {
+import './Search.css';
+
+export default class Search extends Component {
   static  propTypes = {
     currentFilters: PropTypes.array.isRequired,
     setCurrentFilters: PropTypes.func.isRequired,
@@ -16,7 +18,7 @@ export default class Filters extends Component {
 
   render() {
     return (
-      <div style={{width: 300}}>
+      <div className="search-container">
         <SearchItem />
       </div>
     );
