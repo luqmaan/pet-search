@@ -31,7 +31,7 @@ export default class SearchItem extends Component {
 
   render() {
     return (
-      <div className="search-item">
+      <div className="SearchItem">
         <SearchFieldSelect
           searchField={this.props.search.searchField}
           onChange={this.setSearchField}

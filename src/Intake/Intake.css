@@ -1,0 +1,31 @@
+.Intake {
+    display: flex;
+    margin: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e4e8eb;
+}
+.Intake:last-child {
+    border: none;
+}
+.IntakePhoto {
+    margin-right: 10px;
+}
+.IntakePhoto img {
+    max-width: 150px;
+    max-width: 150px;
+}
+.Info b {
+    font-weight: normal;
+    color: #bfbfbf;
+    margin-right: 10px;
+    text-decoration: none
+}
+@media (min-width: 300px) {
+    .Info b {
+        display: flex;
+        flex: 1;
+    }
+}
+.Title {
+    display: block;
+}

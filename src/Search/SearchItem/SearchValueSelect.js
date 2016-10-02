@@ -34,7 +34,7 @@ export default class SearchValueSelect extends Component {
 
   render() {
     return (
-      <div className="search-input" style={{flex: 1, minWidth: 200}}>
+      <div className="SearchInput" style={{flex: 1, minWidth: 200}}>
         <Select.Async
           key={this.props.searchField} /* Need this to prevent caching */
           loadOptions={this.loadOptions}

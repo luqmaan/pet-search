@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, PropTypes} from 'react';
 import map from 'lodash/map';
 import uniqueId from 'lodash/uniqueId';
 
@@ -14,6 +14,10 @@ const createNewSearch = () => ({
 });
 
 export default class Search extends Component {
+  static propTypes = {
+    onChange: PropTypes.func.isRequired,
+  };
+
   constructor(props) {
     super(props);
     const firstSearch = createNewSearch();
@@ -25,27 +29,29 @@ export default class Search extends Component {
     };
   }
 
+  setSearches(newSearches) {
+    this.setState({searches: newSearches});
+    this.props.onChange(newSearches);
+  }
+
   updateSearch = (updatedSearch) => {
-    this.setState({searches: {
+    this.setSearches({
       ...this.state.searches,
       [updatedSearch.id]: updatedSearch,
-    }});
+    });
   }
 
   addSearchItem = () => {
     const newSearch = createNewSearch();
-
-    this.setState({
-      searches: {
-        ...this.state.searches,
-        [newSearch.id]: newSearch,
-      }
+    this.setSearches({
+      ...this.state.searches,
+      [newSearch.id]: newSearch,
     });
   }
 
   render() {
     return (
-      <div className="search-container">
+      <div className="Search">
         {map(this.state.searches, (search) => (
           <SearchItem
             key={search.id}

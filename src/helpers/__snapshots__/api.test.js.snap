@@ -1,0 +1,11 @@
+exports[`api getQuery format a query 1`] = `
+"SELECT *
+    WHERE animal_type = \'Livestock\' AND animal_type != \'Bird\'
+    ORDER BY datetime DESC
+    LIMIT 10
+  "
+`;
+
+exports[`api getWhereClause should format a single querystring 1`] = `"WHERE animal_type = \'Livestock\'"`;
+
+exports[`api getWhereClause should format multiple querystring 1`] = `"WHERE animal_type = \'Livestock\' AND animal_type != \'Bird\'"`;

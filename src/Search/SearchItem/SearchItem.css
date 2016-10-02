@@ -1,5 +1,4 @@
-.search-item {
-    display: flex;
+.SearchItem {
     align-items: center;
     justify-content: center;
     background-color: #ffffff;
@@ -7,14 +6,23 @@
     border-radius: 3px;
     box-shadow: 0 1px 1px 0px rgba(0, 0, 0, 0.05);
 }
-.search-input {
-    margin: 0 10px;
+
+@media (min-width: 200px)  {
+    .SearchInput {
+        margin-bottom: 10px;
+    }
 }
-.search-input:first-child {
-    margin-left: 0;
-}
-.search-input:last-child {
-    margin-right: 0;
+
+@media (min-width: 800px)  {
+    .SearchInput {
+        margin: 0 10px;
+    }
+    .SearchInput:first-child {
+        margin-left: 0;
+    }
+    .SearchInput:last-child {
+        margin-right: 0;
+    }
 }
 
 .Button:hover, .ButtonCircle:hover {

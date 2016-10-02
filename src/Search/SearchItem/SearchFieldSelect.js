@@ -11,7 +11,7 @@ export default class SearchFieldSelect extends Component {
 
   render() {
     return (
-      <div className="search-input" style={{flex: 1, minWidth: 200}}>
+      <div className="SearchInput" style={{flex: 1, minWidth: 200}}>
         <Select
           options={IntakeFields}
           value={this.props.searchField}

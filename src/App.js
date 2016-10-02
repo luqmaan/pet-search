@@ -3,10 +3,9 @@ import React, { Component } from 'react';
 import 'react-select/dist/react-select.css';
 import './App.css';
 
-import {parseResponse} from './helpers/api';
-
+import {querySocrata} from './helpers/api';
 import Search from './Search';
-// import Intake from './Intake';
+import Intake from './Intake';
 
 export default class App extends Component {
 
@@ -20,34 +19,32 @@ export default class App extends Component {
   }
 
   componentDidMount() {
-    // this.loadIntakes();
+    this.loadIntakes();
   }
 
   setCurrentFilters = (filters) => {
     this.setState({currentFilters: filters});
   }
 
-  loadIntakes = () => {
-    const query = `SELECT *
-      ORDER BY datetime DESC
-      LIMIT 10
-    `;
+  loadIntakes = (search) => {
+    querySocrata('https://data.austintexas.gov/resource/fdzn-9yqv.json', search)
+      .then((data) => this.setState({intakes: data}));
+  }
 
-    const url = `https://data.austintexas.gov/resource/fdzn-9yqv.json?$query=${query}`;
-
-    fetch(url)
-      .then((res) => parseResponse(res))
-      .then((data) => {
-        this.setState({intakes: data})
-      });
+  applySearch = (search) => {
+    this.loadIntakes(search);
   }
 
   render() {
     return (
-      <div className="app">
-        <h1>Animal Intakes</h1>
-        <Search currentFilters={this.state.currentFilters} setCurrentFilters={this.setCurrentFilters} />
-        {/*this.state.intakes && this.state.intakes.map((intake) => <Intake intake={intake} key={intake.animal_id}/>)*/}
+      <div>
+        <div className="Header">
+          <h1>Animal Intakes</h1>
+        </div>
+        <Search onChange={this.applySearch} />
+        <div className='SearchResults'>
+          {this.state.intakes && this.state.intakes.map((intake) => <Intake intake={intake} key={intake.animal_id}/>)}
+        </div>
       </div>
     );
   }

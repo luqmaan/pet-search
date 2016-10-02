@@ -3,10 +3,10 @@ import Select from 'react-select';
 
 const Conditions = [
   {label: 'is', value: 'is'},
-  {label: 'is not', value: 'is not'},
-  {label: 'starts with', value: 'starts with'},
-  {label: 'ends with', value: 'ends with'},
-  {label: 'has substring', value: 'has substring'},
+  {label: 'is not', value: 'is_not'},
+  {label: 'starts with', value: 'starts_with'},
+  {label: 'ends with', value: 'ends_with'},
+  {label: 'has substring', value: 'has_substring'},
 ];
 
 export default class SearchConditionSelect extends Component {
@@ -17,7 +17,7 @@ export default class SearchConditionSelect extends Component {
 
   render() {
     return (
-      <div className="search-input" style={{minWidth: 150}}>
+      <div className="SearchInput" style={{minWidth: 150}}>
         <Select
           options={Conditions}
           value={this.props.searchCondition}
