@@ -3,6 +3,7 @@
     margin: 10px;
     padding-bottom: 10px;
     border-bottom: 1px solid #e4e8eb;
+    align-items: center;
 }
 .Intake:last-child {
     border: none;
@@ -20,7 +21,7 @@
 .Info b {
     font-weight: normal;
     color: #bfbfbf;
-    margin-right: 10px;
+    margin-right: 5px;
     text-decoration: none
 }
 @media (min-width: 300px) {
