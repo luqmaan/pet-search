@@ -80,28 +80,30 @@ export default class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className="App">
         <div className="Header">
           <Toolbar backgroundColor="#f5f6f7" color="primary">
             <NavItem>Austin Animal Center Intakes</NavItem>
           </Toolbar>
         </div>
-        <Search onChange={this.applySearch} />
-        <div className={classNames('SearchResults', {loading: this.state.loading})}>
-          {this.state.pagination.count === 0 && (
-            <div className="NoResults">
-              {this.state.loading ? 'Loading...' : 'No results found.'}
-            </div>
-          )}
-          {this.state.intakes && this.state.intakes.map((intake) => (
-            <Intake intake={intake} key={intake.animal_id}/>
-          ))}
+        <div className="Content">
+          <Search onChange={this.applySearch} />
+          <div className={classNames('SearchResults', {loading: this.state.loading})}>
+            {this.state.pagination.count === 0 && (
+              <div className="NoResults">
+                {this.state.loading ? 'Loading...' : 'No results found.'}
+              </div>
+            )}
+            {this.state.intakes && this.state.intakes.map((intake) => (
+              <Intake intake={intake} key={intake.animal_id}/>
+            ))}
+          </div>
+          <Pagination
+            {...this.state.pagination}
+            toNextPage={this.toNextPage}
+            toPreviousPage={this.toPreviousPage}
+          />
         </div>
-        <Pagination
-          {...this.state.pagination}
-          toNextPage={this.toNextPage}
-          toPreviousPage={this.toPreviousPage}
-        />
       </div>
     );
   }

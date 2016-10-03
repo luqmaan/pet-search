@@ -2,7 +2,15 @@
     margin: 10px;
     padding-bottom: 10px;
     border-bottom: 1px solid #e4e8eb;
-    align-items: center;
+}
+@media (min-width: 550px) {
+    .Intake {
+        display: flex;
+        align-items: top;
+    }
+    .IntakeDetails {
+        margin-right: 20px;
+    }
 }
 .Intake:last-child {
     border: none;
@@ -16,6 +24,7 @@
 }
 .Overview {
     display: flex;
+    align-items: center;
 }
 .IntakeDetails {
     flex: 1;
