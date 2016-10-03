@@ -43,7 +43,7 @@ export default class App extends Component {
   }
 
   refresh() {
-      scrollTo(0, 0, {duration: 300});
+      scrollTo(0, 0, {duration: 100});
       this.setState({loading: true});
       querySocrata('https://data.austintexas.gov/resource/fdzn-9yqv.json', this.state.search, this.state.pagination)
         .then((data) => this.setState({intakes: data, loading: false}));
