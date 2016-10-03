@@ -3,7 +3,9 @@
         width: 100%;
     }
 }
-
+.SearchResults.loading {
+    opacity: 0.5;
+}
 .Header {
     background-color: #a88a72;
     margin: 0;

@@ -3,3 +3,14 @@
     padding: 10px;
     border-radius: 2px;
 }
+.SearchButton button {
+    display: flex !important;
+    background: red;
+}
+.SearchButton .Icon {
+    margin-right: 10px;
+}
+
+.CloseButton {
+    margin-bottom: 10px;
+}

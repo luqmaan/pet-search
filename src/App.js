@@ -1,11 +1,16 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
+import {Toolbar, NavItem} from 'rebass';
+import classNames from 'classnames';
 
 import 'react-select/dist/react-select.css';
 import './App.css';
 
-import {querySocrata} from './helpers/api';
+import {querySocrata, querySocrataCounts} from './helpers/api';
 import Search from './Search';
 import Intake from './Intake';
+import Pagination from './Pagination';
+
+const DefaultPagination = {limit: 10, offset: 0, count: 0};
 
 export default class App extends Component {
 
@@ -14,7 +19,9 @@ export default class App extends Component {
 
     this.state = {
       intakes: [],
-      currentFilters: [],
+      pagination: DefaultPagination,
+      search: {},
+      loading: true,
     };
   }
 
@@ -27,8 +34,42 @@ export default class App extends Component {
   }
 
   loadIntakes = (search) => {
-    querySocrata('https://data.austintexas.gov/resource/fdzn-9yqv.json', search)
-      .then((data) => this.setState({intakes: data}));
+    this.setState({search}, () => {
+      this.refresh();
+      querySocrataCounts('https://data.austintexas.gov/resource/fdzn-9yqv.json', this.state.search, this.state.pagination)
+        .then((count) => this.setPaginationCount(count));
+    });
+  }
+
+  refresh() {
+      this.setState({loading: true});
+      querySocrata('https://data.austintexas.gov/resource/fdzn-9yqv.json', this.state.search, this.state.pagination)
+        .then((data) => this.setState({intakes: data, loading: false}));
+  }
+
+  setPaginationCount = (count) => {
+    this.setState({pagination: {
+        ...DefaultPagination,
+        count,
+    }});
+  }
+
+  toNextPage = () => {
+    const {pagination} = this.state;
+    this.setState({pagination: {
+        ...pagination,
+        offset: pagination.offset + pagination.limit
+    }});
+    this.refresh();
+  }
+
+  toPreviousPage = () => {
+    const {pagination} = this.state;
+    this.setState({pagination: {
+        ...pagination,
+        offset: pagination.offset - pagination.limit
+    }});
+    this.refresh();
   }
 
   applySearch = (search) => {
@@ -39,12 +80,24 @@ export default class App extends Component {
     return (
       <div>
         <div className="Header">
-          <h1>Animal Intakes</h1>
+          <Toolbar>
+            <NavItem>Austin Animal Center Intakes</NavItem>
+          </Toolbar>
         </div>
         <Search onChange={this.applySearch} />
-        <div className='SearchResults'>
-          {this.state.intakes && this.state.intakes.map((intake) => <Intake intake={intake} key={intake.animal_id}/>)}
+        <div className={classNames('SearchResults', {loading: this.state.loading})}>
+          {this.state.pagination.count === 0 && (
+            <div className="NoResults">No results found.</div>
+          )}
+          {this.state.intakes && this.state.intakes.map((intake) => (
+            <Intake intake={intake} key={intake.animal_id}/>
+          ))}
         </div>
+        <Pagination
+          {...this.state.pagination}
+          toNextPage={this.toNextPage}
+          toPreviousPage={this.toPreviousPage}
+        />
       </div>
     );
   }

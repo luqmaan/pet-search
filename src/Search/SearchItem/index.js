@@ -14,7 +14,9 @@ export default class SearchItem extends Component {
   static propTypes = {
     search: SearchType.isRequired,
     addSearchItem: PropTypes.func.isRequired,
+    removeSearchItem: PropTypes.func.isRequired,
     updateSearch: PropTypes.func.isRequired,
+    allowDelete: PropTypes.bool.isRequired,
   };
 
   setSearchField = (searchField) => {
@@ -27,6 +29,10 @@ export default class SearchItem extends Component {
 
   setSearchValue = (searchValue) => {
     this.props.updateSearch({...this.props.search, searchValue});
+  }
+
+  removeSearchItem = () => {
+    this.props.removeSearchItem(this.props.search);
   }
 
   render() {
@@ -51,9 +57,17 @@ export default class SearchItem extends Component {
           onClick={this.props.addSearchItem}
           pill
         >And</Button>
-        <ButtonCircle title="Delete" color="midgray" backgroundColor="gray" pill>
-          <Icon name="trash" />
-        </ButtonCircle>
+        {this.props.allowDelete && (
+          <ButtonCircle
+            title="Delete"
+            color="midgray"
+            backgroundColor="gray"
+            onClick={this.removeSearchItem}
+            pill
+          >
+            <Icon name="trash" />
+          </ButtonCircle>
+        )}
       </div>
     );
   }

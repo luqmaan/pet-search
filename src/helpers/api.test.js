@@ -54,7 +54,7 @@ describe('api', () => {
           searchValue: 'Bird',
         },
       };
-      expect(getQuery(searches)).toMatchSnapshot();
+      expect(getQuery('SELECT *', searches)).toMatchSnapshot();
     });
   });
 });

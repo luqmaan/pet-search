@@ -13,18 +13,6 @@
     }
 }
 
-@media (min-width: 800px)  {
-    .SearchInput {
-        margin: 0 10px;
-    }
-    .SearchInput:first-child {
-        margin-left: 0;
-    }
-    .SearchInput:last-child {
-        margin-right: 0;
-    }
-}
-
 .Button:hover, .ButtonCircle:hover {
     box-shadow: 0 3px 9px 1px rgba(0, 0, 0, 0.125);
 }

@@ -30,26 +30,35 @@ export function formatSearch({searchField, searchCondition, searchValue}) {
   throw new Error(`Unexpected search condition: ${searchCondition}`);
 }
 
-export function getWhereClause(searches) {
-  const formattedSearches = map(searches).map((search) => formatSearch(search));
-  if (!formattedSearches.length) {
+export function getWhereClause(whereTerms = {}) {
+  const formattedSearches = map(whereTerms).map((search) => formatSearch(search));
+  if (formattedSearches.length === 0) {
     return '';
   }
   return `WHERE ${formattedSearches.join(' AND ')}`;
 }
 
-export function getQuery(searches) {
-  const whereClause = getWhereClause(searches);
-  return `SELECT *
+export function getQuery(selectClause, whereTerms, orderClause, pagination) {
+  const whereClause = getWhereClause(whereTerms);
+  return `${selectClause}
     ${whereClause}
-    ORDER BY datetime DESC
-    LIMIT 10
+    ${orderClause}
+    LIMIT ${pagination.limit}
+    OFFSET ${pagination.offset}
   `;
 }
 
-export function querySocrata(url, searches = {}) {
-  const query = getQuery(searches);
+export function querySocrata(url, whereTerms, pagination) {
+  const query = getQuery('SELECT *', whereTerms, 'ORDER BY datetime DESC', pagination);
   const formattedUrl = `${url}?$query=${query}`;
   return fetch(formattedUrl)
     .then((res) => parseResponse(res));
+}
+
+export function querySocrataCounts(url, whereTerms, pagination) {
+  const query = getQuery('SELECT count(0)', whereTerms, '', pagination, );
+  const formattedUrl = `${url}?$query=${query}`;
+  return fetch(formattedUrl)
+    .then((res) => parseResponse(res))
+    .then((data) => Number(data[0].count_0));
 }
