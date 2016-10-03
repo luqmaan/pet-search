@@ -21,6 +21,7 @@
     "react-select": "^1.0.0-rc.2",
     "rebass": "^0.3.3",
     "reflexbox": "^2.2.2",
+    "scroll-to": "0.0.2",
     "whatwg-fetch": "^1.0.0"
   },
   "scripts": {

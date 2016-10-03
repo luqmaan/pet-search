@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Toolbar, NavItem} from 'rebass';
 import classNames from 'classnames';
+import scrollTo from 'scroll-to';
 
 import 'react-select/dist/react-select.css';
 import './App.css';
@@ -42,6 +43,7 @@ export default class App extends Component {
   }
 
   refresh() {
+      scrollTo(0, 0);
       this.setState({loading: true});
       querySocrata('https://data.austintexas.gov/resource/fdzn-9yqv.json', this.state.search, this.state.pagination)
         .then((data) => this.setState({intakes: data, loading: false}));
