@@ -89,7 +89,9 @@ export default class App extends Component {
         <Search onChange={this.applySearch} />
         <div className={classNames('SearchResults', {loading: this.state.loading})}>
           {this.state.pagination.count === 0 && (
-            <div className="NoResults">No results found.</div>
+            <div className="NoResults">
+              {this.state.loading ? 'Loading...' : 'No results found.'}
+            </div>
           )}
           {this.state.intakes && this.state.intakes.map((intake) => (
             <Intake intake={intake} key={intake.animal_id}/>

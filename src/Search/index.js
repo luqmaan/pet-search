@@ -4,13 +4,14 @@ import Icon from 'react-geomicons';
 import map from 'lodash/map';
 import filter from 'lodash/filter';
 import uniqueId from 'lodash/uniqueId';
+import Guid from 'guid';
 
 import SearchItem from './SearchItem';
 
 import './Search.css';
 
 const createNewSearch = () => ({
-  id: uniqueId('search_'),
+  id: Guid.create(),
   searchField: 'animal_type',
   searchCondition: 'is',
   searchValue: null,
