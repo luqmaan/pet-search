@@ -82,7 +82,7 @@ export default class App extends Component {
     return (
       <div>
         <div className="Header">
-          <Toolbar>
+          <Toolbar backgroundColor="#f5f6f7" color="primary">
             <NavItem>Austin Animal Center Intakes</NavItem>
           </Toolbar>
         </div>

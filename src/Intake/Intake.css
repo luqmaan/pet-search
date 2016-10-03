@@ -1,5 +1,4 @@
 .Intake {
-    display: flex;
     margin: 10px;
     padding-bottom: 10px;
     border-bottom: 1px solid #e4e8eb;
@@ -14,6 +13,9 @@
 .IntakePhoto img {
     max-width: 150px;
     max-width: 150px;
+}
+.Overview {
+    display: flex;
 }
 .IntakeDetails {
     flex: 1;
