@@ -1,3 +1,7 @@
+.App {
+    max-width: 700px;
+    margin: 0 auto 10px;
+}
 .SearchResults {
     background: #fff;
     width: 100%;
@@ -10,7 +14,6 @@
 .SearchResults.loading {
     opacity: 0.5;
 }
-.App {
-    max-width: 700px;
-    margin: 0 auto 10px;
+.NoResults {
+    padding: 30px;
 }
