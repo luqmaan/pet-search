@@ -24,7 +24,6 @@ export default class Search extends Component {
   constructor(props) {
     super(props);
     const firstSearch = createNewSearch();
-    console.log('firstSearch', firstSearch)
 
     this.state = {
       // FIXME: searches should be an array, not an object
@@ -55,7 +54,6 @@ export default class Search extends Component {
     const updated = filter(this.state.searches,
       (search) => search.id !== deletedSearch.id
     );
-    console.log('searches', updated, deletedSearch);
     this.setSearches(updated);
   }
 

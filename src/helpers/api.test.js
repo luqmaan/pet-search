@@ -54,7 +54,8 @@ describe('api', () => {
           searchValue: 'Bird',
         },
       };
-      expect(getQuery('SELECT *', searches)).toMatchSnapshot();
+      const pagination = {limit: 10, count: 15, offset: 6};
+      expect(getQuery('SELECT *', searches, 'ORDER BY datetime', pagination)).toMatchSnapshot();
     });
   });
 });

@@ -1,8 +1,9 @@
 exports[`api getQuery format a query 1`] = `
 "SELECT *
-    WHERE animal_type = 'Livestock' AND animal_type != 'Bird'
-    ORDER BY datetime DESC
+    WHERE animal_type = \'Livestock\' AND animal_type != \'Bird\'
+    ORDER BY datetime
     LIMIT 10
+    OFFSET 6
   "
 `;
 
