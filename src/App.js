@@ -35,7 +35,7 @@ export default class App extends Component {
   }
 
   loadIntakes = (search) => {
-    this.setState({search}, () => {
+    this.setState({search, pagination: {...DefaultPagination}}, () => {
       this.refresh();
       querySocrataCounts('https://data.austintexas.gov/resource/fdzn-9yqv.json', this.state.search, this.state.pagination)
         .then((count) => this.setPaginationCount(count));
