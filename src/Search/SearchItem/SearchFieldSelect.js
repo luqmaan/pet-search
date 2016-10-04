@@ -16,6 +16,7 @@ export default class SearchFieldSelect extends Component {
           options={IntakeFields}
           value={this.props.searchField}
           onChange={(option) => this.props.onChange(option.value)}
+          clearable={false}
         />
       </div>
     );

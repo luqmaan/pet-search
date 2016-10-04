@@ -22,6 +22,7 @@ export default class SearchConditionSelect extends Component {
           options={Conditions}
           value={this.props.searchCondition}
           onChange={(option) => this.props.onChange(option.value)}
+          clearable={false}
         />
       </div>
     );
