@@ -11,7 +11,7 @@ export default function({intake}) {
       <div className="Overview">
         <div className="IntakePhoto" >
           <a href={link} target="_blank">
-            <img src={image} alt={`Animal ${intake.animal_id}`} />
+            <img src={image} alt={`${intake.animal_type}, ${intake.color}, ${intake.breed}`} />
           </a>
         </div>
         <div className="IntakeDetails">
