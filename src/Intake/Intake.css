@@ -10,6 +10,7 @@
     }
     .IntakeDetails {
         margin-right: 20px;
+        width: 220px;
     }
 }
 .Intake:last-child {
