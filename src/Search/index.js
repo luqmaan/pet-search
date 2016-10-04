@@ -1,7 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import {Button, ButtonOutline} from 'rebass';
 import Icon from 'react-geomicons';
-import map from 'lodash/map';
+import toArray from 'lodash/toArray';
 import filter from 'lodash/filter';
 import uniqueId from 'lodash/uniqueId';
 import Guid from 'guid';
@@ -11,7 +11,7 @@ import SearchItem from './SearchItem';
 import './Search.css';
 
 const createNewSearch = () => ({
-  id: Guid.create(),
+  id: Guid.create().value,
   searchField: 'animal_type',
   searchCondition: 'is',
   searchValue: null,
@@ -80,6 +80,8 @@ export default class Search extends Component {
       )
     }
 
+    const sortedSearches = toArray(this.state.searches);
+
     return (
       <div className="Search">
         <div className="CloseButton">
@@ -87,7 +89,7 @@ export default class Search extends Component {
             Close
           </ButtonOutline>
         </div>
-        {map(this.state.searches, (search, index) => (
+        {sortedSearches.map((search, index) => (
           <SearchItem
             key={search.id}
             search={search}

@@ -1,4 +1,5 @@
 import map from 'lodash/map';
+import isNil from 'lodash/isNil';
 
 export function parseResponse(res) {
   return res.json()
@@ -31,7 +32,9 @@ export function formatSearch({searchField, searchCondition, searchValue}) {
 }
 
 export function getWhereClause(whereTerms = {}) {
-  const formattedSearches = map(whereTerms).map((search) => formatSearch(search));
+  const formattedSearches = map(whereTerms)
+    .filter(({searchValue}) => !isNil(searchValue))
+    .map((search) => formatSearch(search));
   if (formattedSearches.length === 0) {
     return '';
   }

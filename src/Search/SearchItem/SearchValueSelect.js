@@ -29,7 +29,7 @@ export default class SearchValueSelect extends Component {
   }
 
   onChange = (newValue) => {
-    this.props.onChange(newValue.value);
+    this.props.onChange(newValue ? newValue.value : null);
   }
 
   render() {

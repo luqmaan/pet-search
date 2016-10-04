@@ -36,6 +36,38 @@ describe('api', () => {
 
       expect(getWhereClause(searches)).toMatchSnapshot();
     });
+
+    it('should skip null for one search', () => {
+      const searches = {
+        search_1: {
+          id: 'search_1',
+          searchField: 'animal_type',
+          searchCondition: 'is',
+          searchValue: null,
+        }
+      };
+
+      expect(getWhereClause(searches)).toMatchSnapshot();
+    });
+
+    it('should skip null two searches', () => {
+      const searches = {
+        search_1: {
+          id: 'search_1',
+          searchField: 'animal_type',
+          searchCondition: 'is',
+          searchValue: null,
+        },
+        search_2: {
+          id: 'search_1',
+          searchField: 'animal_type',
+          searchCondition: 'is_not',
+          searchValue: 'Bird',
+        },
+      };
+
+      expect(getWhereClause(searches)).toMatchSnapshot();
+    });
   });
 
   describe('getQuery', () => {
