@@ -3,7 +3,6 @@ import {Button, ButtonOutline} from 'rebass';
 import Icon from 'react-geomicons';
 import toArray from 'lodash/toArray';
 import filter from 'lodash/filter';
-import uniqueId from 'lodash/uniqueId';
 import Guid from 'guid';
 
 import SearchItem from './SearchItem';

@@ -1,6 +1,5 @@
 import React from 'react';
 import moment from 'moment';
-import {Card, CardImage} from 'rebass';
 
 import './Intake.css';
 
@@ -12,7 +11,7 @@ export default function({intake}) {
       <div className="Overview">
         <div className="IntakePhoto" >
           <a href={link} target="_blank">
-            <img src={image} />
+            <img src={image} alt={`Animal ${intake.animal_id}`} />
           </a>
         </div>
         <div className="IntakeDetails">

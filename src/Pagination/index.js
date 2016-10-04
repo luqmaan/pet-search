@@ -1,5 +1,5 @@
 import React, {Component, PropTypes} from 'react';
-import {Button, ButtonCircle} from 'rebass';
+import {ButtonCircle} from 'rebass';
 import Icon from 'react-geomicons';
 
 import './Pagination.css';
