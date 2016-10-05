@@ -14,17 +14,23 @@ export default class Pagination extends Component {
   }
 
   render() {
+    const isFirstPage = this.props.offset - this.props.limit < 0;
+    const isLastPage = this.props.offset + this.props.limit >= this.props.count;
     return (
       <div className="Pagination">
-        <ButtonCircle onClick={this.props.toPreviousPage}>
-          <Icon name="chevronLeft" />
-        </ButtonCircle>
+        {!isFirstPage && (
+          <ButtonCircle onClick={this.props.toPreviousPage}>
+            <Icon name="chevronLeft" />
+          </ButtonCircle>
+        )}
         <div className="PageCounts">
           <b>{(this.props.offset + 1).toLocaleString()}-{Math.min(this.props.offset + this.props.limit, this.props.count).toLocaleString()}</b> of <b>{this.props.count.toLocaleString()}</b>
         </div>
-        <ButtonCircle onClick={this.props.toNextPage}>
-          <Icon name="chevronRight" />
-        </ButtonCircle>
+        {!isLastPage && (
+          <ButtonCircle onClick={this.props.toNextPage}>
+            <Icon name="chevronRight" />
+          </ButtonCircle>
+        )}
       </div>
     );
   }

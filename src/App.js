@@ -60,18 +60,17 @@ export default class App extends Component {
     const {pagination} = this.state;
     this.setState({pagination: {
         ...pagination,
-        offset: pagination.offset + pagination.limit
-    }});
-    this.refresh();
+        offset: pagination.offset + pagination.limit,
+    }}, () => this.refresh());
+
   }
 
   toPreviousPage = () => {
     const {pagination} = this.state;
     this.setState({pagination: {
         ...pagination,
-        offset: pagination.offset - pagination.limit
-    }});
-    this.refresh();
+        offset: pagination.offset - pagination.limit,
+    }}, () => this.refresh());
   }
 
   applySearch = (search) => {
