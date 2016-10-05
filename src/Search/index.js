@@ -84,9 +84,9 @@ export default class Search extends Component {
     return (
       <div className="Search">
         <div className="CloseButton">
-          <Button onClick={this.toggleSearch} theme="error">
+          <ButtonOutline onClick={this.toggleSearch} theme="error">
             Close
-          </Button>
+          </ButtonOutline>
         </div>
         {sortedSearches.map((search, index) => (
           <SearchItem
