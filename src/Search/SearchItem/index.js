@@ -58,7 +58,7 @@ export default class SearchItem extends Component {
           pill
         >And</Button>
         {this.props.allowDelete && (
-          <ButtonCircle
+          <Button
             title="Delete"
             color="midgray"
             backgroundColor="gray"
@@ -66,7 +66,7 @@ export default class SearchItem extends Component {
             pill
           >
             <Icon name="trash" />
-          </ButtonCircle>
+          </Button>
         )}
       </div>
     );

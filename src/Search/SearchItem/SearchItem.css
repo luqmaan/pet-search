@@ -1,13 +1,13 @@
 .SearchItem {
     align-items: center;
     justify-content: center;
-    background-color: #e4e8eb;
+    background-color: #f9fbfc;
     padding: 10px;
     border-radius: 3px;
     box-shadow: 0 1px 1px 0px rgba(0, 0, 0, 0.05);
     margin-bottom: 10px;
+    border: 1px solid #e4e8eb;
 }
-
 
 @media (min-width: 200px)  {
     .SearchInput {
@@ -16,5 +16,7 @@
 }
 
 .Button:hover, .ButtonCircle:hover {
-    box-shadow: 0 3px 9px 1px rgba(0, 0, 0, 0.125);
+    opacity: 0.7;
+    transform: scale(1.05, 1.05);
+    transition: all 100ms ease-in-out;
 }

@@ -2,8 +2,8 @@
     border-radius: 2px;
 }
 @media (max-width: 700px) {
-    .Search {
-        margin: 5px;
+    .SearchButton, .CloseButton {
+        margin: 10px;
     }
 }
 .SearchButton button {

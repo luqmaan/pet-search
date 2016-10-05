@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Toolbar, NavItem} from 'rebass';
+import {Toolbar, NavItem, Space} from 'rebass';
 import classNames from 'classnames';
 import scrollTo from 'scroll-to';
 
@@ -81,8 +81,12 @@ export default class App extends Component {
     return (
       <div className="App">
         <div className="Header">
-          <Toolbar backgroundColor="#f5f6f7" color="primary">
-            <NavItem>Austin Animal Center Intakes</NavItem>
+          <Toolbar backgroundColor="#f5f6f7" color="default">
+            <NavItem color="primary">Intakes</NavItem>
+            <NavItem>Outcomes</NavItem>
+            <NavItem>Intake Map</NavItem>
+            <Space x={1} auto />
+            <NavItem>Austin Animal Center</NavItem>
           </Toolbar>
         </div>
         <div className="Content">
