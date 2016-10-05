@@ -5,6 +5,7 @@
 .SearchResults {
     background: #fff;
     width: 100%;
+    margin-top: 10px;
 }
 @media (min-width: 700px) {
     .SearchResults {
