@@ -1,11 +1,13 @@
 .SearchItem {
     align-items: center;
     justify-content: center;
-    background-color: #ffffff;
-    padding: 5px;
+    background-color: #e4e8eb;
+    padding: 10px;
     border-radius: 3px;
     box-shadow: 0 1px 1px 0px rgba(0, 0, 0, 0.05);
+    margin-bottom: 10px;
 }
+
 
 @media (min-width: 200px)  {
     .SearchInput {

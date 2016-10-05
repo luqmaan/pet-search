@@ -1,6 +1,10 @@
 .Search {
-    background-color: #f5f6f7;
     border-radius: 2px;
+}
+@media (max-width: 700px) {
+    .Search {
+        margin: 5px;
+    }
 }
 .SearchButton button {
     display: flex !important;
