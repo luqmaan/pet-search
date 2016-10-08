@@ -1,0 +1,39 @@
+exports[`undersight getTopScores should calculate scores 1`] = `
+Object {
+  "Pharah": 0,
+  "Reaper": -6,
+  "Soldier 76": 6
+}
+`;
+
+exports[`undersight getTopScores should calculate scores 2`] = `
+Object {
+  "Pharah": 6,
+  "Reaper": 0,
+  "Soldier 76": 0
+}
+`;
+
+exports[`undersight getTopScores should calculate scores 3`] = `
+Object {
+  "Pharah": -6,
+  "Reaper": 0,
+  "Soldier 76": 0
+}
+`;
+
+exports[`undersight getTopScores should calculate scores 4`] = `
+Object {
+  "Pharah": 0,
+  "Reaper": -2,
+  "Soldier 76": 2
+}
+`;
+
+exports[`undersight getTopScores should calculate scores 5`] = `
+Object {
+  "Pharah": 0,
+  "Reaper": -2,
+  "Soldier 76": 2
+}
+`;

@@ -1,0 +1,62 @@
+[
+  {
+    "enemy": "Pharah",
+    "you": "Reaper",
+    "score": -2,
+    "explanation": "Fly above and shoot reaper with rockets. His guns can't reach you and his slow movement prevents him from dodging your slow moving rockets."
+  },
+  {
+    "enemy": "Pharah",
+    "you": "Soldier 76",
+    "score": 2,
+    "explanation": "Because Soldier's rifle is hat scan, it can keep up with Pharah's rapid movement."
+  },
+  {
+    "enemy": "Soldier 76",
+    "you": "Pharah",
+    "score": -2,
+    "explanation": "Soldier will shoot Pharah down very quickly. Flying up does not let her escape his rifle."
+  },
+  {
+    "enemy": "Pharah",
+    "you": "Pharah",
+    "score": 0,
+    "explanation": "Aiming at and hitting another flying Pharah is nearly impossible."
+  },
+  {
+    "enemy": "Reaper",
+    "you": "Soldier 76",
+    "score": 0,
+    "explanation": "This depends on location and skill of the Reaper. If the Reaper is close by, his shotguns win. If the reaper is far, he can escape using his ghost mode."
+  },
+  {
+    "enemy": "Soldier 76",
+    "you": "Reaper",
+    "score": 0,
+    "explanation": "This depends on location and skill of the Reaper. If the Reaper is close by, his shotguns win. If the reaper is far, he can escape using his ghost mode."
+  },
+  {
+    "enemy": "Reaper",
+    "you": "Pharah",
+    "score": 2,
+    "explanation": "Fly above and shoot reaper with rockets. His guns can't reach you and his slow movement prevents him from dodging your slow moving rockets."
+  },
+  {
+    "enemy": "Pharah",
+    "you": "Reaper",
+    "score": -2,
+    "explanation": "Give up. You will lose."
+  },
+  {
+    "enemy": "Reaper",
+    "you": "Reaper",
+    "score": 0,
+    "explanation": "The reaper that can land the most headshots wins."
+  },
+  {
+    "enemy": "Soldier 76",
+    "you": "Soldier 76",
+    "score": 0,
+    "explanation": "Skill decides who wins."
+  }
+]
