@@ -2,7 +2,7 @@ import sum from 'lodash/sum';
 import map from 'lodash/map';
 import sortBy from 'lodash/sortBy';
 import take from 'lodash/take';
-import countersJSON from './counters.json';
+import allCountersJSON from './counters.json';
 import rolesJSON from './roles.json';
 
 function getTopScores(counters, enemyPicks) {
@@ -13,7 +13,7 @@ function getTopScores(counters, enemyPicks) {
       (enemy) => counters.find(x => x.enemy === enemy && x.you === counter.you).score
     ));
   });
-  return sortBy(map(scores, (score, name) => ({score, name})), 'score').reverse();
+  return sortBy(map(scores, (score, you) => ({score, you})), 'score').reverse();
 }
 
 function getTopThree(counters, enemyPicks) {
@@ -31,14 +31,25 @@ function getCategoryPicks(counters, enemyPicks, roles) {
   return take(scores, 2);
 }
 
+const countersJSON = allCountersJSON.filter((counter) => (
+  counter.you === 'Reaper' ||
+  counter.you === 'Pharah' ||
+  counter.you === 'Soldier: 76'
+)).filter((counter) => (
+  counter.enemy === 'Reaper' ||
+  counter.enemy === 'Pharah' ||
+  counter.enemy === 'Soldier: 76'
+));
+
+
 describe('undersight', () => {
   describe('getTopScores', () => {
     it('should calculate scores', () => {
       expect(getTopScores(countersJSON, ['Pharah', 'Pharah', 'Pharah'])).toMatchSnapshot();
       expect(getTopScores(countersJSON, ['Reaper', 'Reaper', 'Reaper'])).toMatchSnapshot();
-      expect(getTopScores(countersJSON, ['Soldier 76', 'Soldier 76', 'Soldier 76'])).toMatchSnapshot();
-      expect(getTopScores(countersJSON, ['Reaper', 'Soldier 76', 'Pharah'])).toMatchSnapshot();
-      expect(getTopScores(countersJSON, ['Soldier 76', 'Pharah', 'Reaper'])).toMatchSnapshot();
+      expect(getTopScores(countersJSON, ['Soldier: 76', 'Soldier: 76', 'Soldier: 76'])).toMatchSnapshot();
+      expect(getTopScores(countersJSON, ['Reaper', 'Soldier: 76', 'Pharah'])).toMatchSnapshot();
+      expect(getTopScores(countersJSON, ['Soldier: 76', 'Pharah', 'Reaper'])).toMatchSnapshot();
     });
 
     it('should calculate score for one enemy', () => {
@@ -54,9 +65,9 @@ describe('undersight', () => {
     it('should get the top three counters to a team', () => {
       expect(getTopThree(countersJSON, ['Pharah', 'Pharah', 'Pharah'])).toMatchSnapshot();
       expect(getTopThree(countersJSON, ['Reaper', 'Reaper', 'Reaper'])).toMatchSnapshot();
-      expect(getTopThree(countersJSON, ['Soldier 76', 'Soldier 76', 'Soldier 76'])).toMatchSnapshot();
-      expect(getTopThree(countersJSON, ['Reaper', 'Soldier 76', 'Pharah'])).toMatchSnapshot();
-      expect(getTopThree(countersJSON, ['Soldier 76', 'Pharah', 'Reaper'])).toMatchSnapshot();
+      expect(getTopThree(countersJSON, ['Soldier: 76', 'Soldier: 76', 'Soldier: 76'])).toMatchSnapshot();
+      expect(getTopThree(countersJSON, ['Reaper', 'Soldier: 76', 'Pharah'])).toMatchSnapshot();
+      expect(getTopThree(countersJSON, ['Soldier: 76', 'Pharah', 'Reaper'])).toMatchSnapshot();
     });
   });
 
