@@ -1,0 +1,90 @@
+[
+  {
+    "name": "Soldier 76",
+    "role": "Offense"
+  },
+  {
+    "name": "Reaper",
+    "role": "Offense"
+  },
+  {
+    "name": "Pharah",
+    "role": "Offense"
+  },
+  {
+    "name": "Genji",
+    "role": "Offense"
+  },
+  {
+    "name": "McCree",
+    "role": "Offense"
+  },
+  {
+    "name": "Tracer",
+    "role": "Offense"
+  },
+  {
+    "name": "Bastion",
+    "role": "Defense"
+  },
+  {
+    "name": "Hanzo",
+    "role": "Defense"
+  },
+  {
+    "name": "Junkrat",
+    "role": "Defense"
+  },
+  {
+    "name": "Mei",
+    "role": "Defense"
+  },
+  {
+    "name": "Torbjörn",
+    "role": "Defense"
+  },
+  {
+    "name": "Widowmaker",
+    "role": "Defense"
+  },
+  {
+    "name": "D.Va",
+    "role": "Tank"
+  },
+  {
+    "name": "Reinhardt",
+    "role": "Tank"
+  },
+  {
+    "name": "Roadhog",
+    "role": "Tank"
+  },
+  {
+    "name": "Winston",
+    "role": "Tank"
+  },
+  {
+    "name": "Zarya",
+    "role": "Tank"
+  },
+  {
+    "name": "Ana",
+    "role": "Support"
+  },
+  {
+    "name": "Lúcio",
+    "role": "Support"
+  },
+  {
+    "name": "Mercy",
+    "role": "Support"
+  },
+  {
+    "name": "Symmetra",
+    "role": "Support"
+  },
+  {
+    "name": "Zenyatta",
+    "role": "Support"
+  }
+]

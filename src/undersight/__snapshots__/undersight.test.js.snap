@@ -1,39 +1,242 @@
+exports[`undersight getHeroCounters should get two counters for a specific hero 1`] = `
+Array [
+  Object {
+    "name": "Soldier 76",
+    "score": 2
+  },
+  Object {
+    "name": "Pharah",
+    "score": 0
+  }
+]
+`;
+
+exports[`undersight getHeroCounters should get two counters for a specific hero 2`] = `
+Array [
+  Object {
+    "name": "Pharah",
+    "score": 2
+  },
+  Object {
+    "name": "Soldier 76",
+    "score": 0
+  }
+]
+`;
+
+exports[`undersight getHeroCounters should get two counters for a specific hero 3`] = `
+Array [
+  Object {
+    "name": "Reaper",
+    "score": 0
+  },
+  Object {
+    "name": "Soldier 76",
+    "score": 0
+  }
+]
+`;
+
+exports[`undersight getTopScores should calculate score for four enemy 1`] = `
+Array [
+  Object {
+    "name": "Soldier 76",
+    "score": 8
+  },
+  Object {
+    "name": "Pharah",
+    "score": 0
+  },
+  Object {
+    "name": "Reaper",
+    "score": -8
+  }
+]
+`;
+
+exports[`undersight getTopScores should calculate score for one enemy 1`] = `
+Array [
+  Object {
+    "name": "Soldier 76",
+    "score": 2
+  },
+  Object {
+    "name": "Pharah",
+    "score": 0
+  },
+  Object {
+    "name": "Reaper",
+    "score": -2
+  }
+]
+`;
+
 exports[`undersight getTopScores should calculate scores 1`] = `
-Object {
-  "Pharah": 0,
-  "Reaper": -6,
-  "Soldier 76": 6
-}
+Array [
+  Object {
+    "name": "Soldier 76",
+    "score": 6
+  },
+  Object {
+    "name": "Pharah",
+    "score": 0
+  },
+  Object {
+    "name": "Reaper",
+    "score": -6
+  }
+]
 `;
 
 exports[`undersight getTopScores should calculate scores 2`] = `
-Object {
-  "Pharah": 6,
-  "Reaper": 0,
-  "Soldier 76": 0
-}
+Array [
+  Object {
+    "name": "Pharah",
+    "score": 6
+  },
+  Object {
+    "name": "Soldier 76",
+    "score": 0
+  },
+  Object {
+    "name": "Reaper",
+    "score": 0
+  }
+]
 `;
 
 exports[`undersight getTopScores should calculate scores 3`] = `
-Object {
-  "Pharah": -6,
-  "Reaper": 0,
-  "Soldier 76": 0
-}
+Array [
+  Object {
+    "name": "Reaper",
+    "score": 0
+  },
+  Object {
+    "name": "Soldier 76",
+    "score": 0
+  },
+  Object {
+    "name": "Pharah",
+    "score": -6
+  }
+]
 `;
 
 exports[`undersight getTopScores should calculate scores 4`] = `
-Object {
-  "Pharah": 0,
-  "Reaper": -2,
-  "Soldier 76": 2
-}
+Array [
+  Object {
+    "name": "Soldier 76",
+    "score": 2
+  },
+  Object {
+    "name": "Pharah",
+    "score": 0
+  },
+  Object {
+    "name": "Reaper",
+    "score": -2
+  }
+]
 `;
 
 exports[`undersight getTopScores should calculate scores 5`] = `
-Object {
-  "Pharah": 0,
-  "Reaper": -2,
-  "Soldier 76": 2
-}
+Array [
+  Object {
+    "name": "Soldier 76",
+    "score": 2
+  },
+  Object {
+    "name": "Pharah",
+    "score": 0
+  },
+  Object {
+    "name": "Reaper",
+    "score": -2
+  }
+]
+`;
+
+exports[`undersight getTopThree should get the top three counters to a team 1`] = `
+Array [
+  Object {
+    "name": "Soldier 76",
+    "score": 6
+  },
+  Object {
+    "name": "Pharah",
+    "score": 0
+  },
+  Object {
+    "name": "Reaper",
+    "score": -6
+  }
+]
+`;
+
+exports[`undersight getTopThree should get the top three counters to a team 2`] = `
+Array [
+  Object {
+    "name": "Pharah",
+    "score": 6
+  },
+  Object {
+    "name": "Soldier 76",
+    "score": 0
+  },
+  Object {
+    "name": "Reaper",
+    "score": 0
+  }
+]
+`;
+
+exports[`undersight getTopThree should get the top three counters to a team 3`] = `
+Array [
+  Object {
+    "name": "Reaper",
+    "score": 0
+  },
+  Object {
+    "name": "Soldier 76",
+    "score": 0
+  },
+  Object {
+    "name": "Pharah",
+    "score": -6
+  }
+]
+`;
+
+exports[`undersight getTopThree should get the top three counters to a team 4`] = `
+Array [
+  Object {
+    "name": "Soldier 76",
+    "score": 2
+  },
+  Object {
+    "name": "Pharah",
+    "score": 0
+  },
+  Object {
+    "name": "Reaper",
+    "score": -2
+  }
+]
+`;
+
+exports[`undersight getTopThree should get the top three counters to a team 5`] = `
+Array [
+  Object {
+    "name": "Soldier 76",
+    "score": 2
+  },
+  Object {
+    "name": "Pharah",
+    "score": 0
+  },
+  Object {
+    "name": "Reaper",
+    "score": -2
+  }
+]
 `;
