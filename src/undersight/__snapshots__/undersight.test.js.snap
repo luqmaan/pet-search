@@ -2,26 +2,26 @@ exports[`undersight getAllRolePicks should get picks for each category 1`] = `
 Object {
   "Defense": Array [
     Object {
-      "score": 6,
-      "you": "Hanzo"
+      "name": "Hanzo",
+      "score": 6
     }
   ],
   "Offense": Array [
     Object {
-      "score": 6,
-      "you": "McCree"
+      "name": "McCree",
+      "score": 6
     }
   ],
   "Support": Array [
     Object {
-      "score": 3,
-      "you": "Ana"
+      "name": "Ana",
+      "score": 3
     }
   ],
   "Tank": Array [
     Object {
-      "score": 3,
-      "you": "Roadhog"
+      "name": "Roadhog",
+      "score": 3
     }
   ]
 }
@@ -31,26 +31,26 @@ exports[`undersight getAllRolePicks should get picks for each category 2`] = `
 Object {
   "Defense": Array [
     Object {
-      "score": 9,
-      "you": "Widowmaker"
+      "name": "Widowmaker",
+      "score": 9
     }
   ],
   "Offense": Array [
     Object {
-      "score": 12,
-      "you": "McCree"
+      "name": "McCree",
+      "score": 12
     }
   ],
   "Support": Array [
     Object {
-      "score": 9,
-      "you": "Ana"
+      "name": "Ana",
+      "score": 9
     }
   ],
   "Tank": Array [
     Object {
-      "score": 6,
-      "you": "Roadhog"
+      "name": "Roadhog",
+      "score": 6
     }
   ]
 }
@@ -59,16 +59,16 @@ Object {
 exports[`undersight getTopScores should calculate score for four enemy 1`] = `
 Array [
   Object {
-    "score": 4,
-    "you": "Soldier: 76"
+    "name": "Soldier: 76",
+    "score": 4
   },
   Object {
-    "score": 4,
-    "you": "Reaper"
+    "name": "Reaper",
+    "score": 4
   },
   Object {
-    "score": 0,
-    "you": "Pharah"
+    "name": "Pharah",
+    "score": 0
   }
 ]
 `;
@@ -76,16 +76,16 @@ Array [
 exports[`undersight getTopScores should calculate score for one enemy 1`] = `
 Array [
   Object {
-    "score": 1,
-    "you": "Soldier: 76"
+    "name": "Soldier: 76",
+    "score": 1
   },
   Object {
-    "score": 1,
-    "you": "Reaper"
+    "name": "Reaper",
+    "score": 1
   },
   Object {
-    "score": 0,
-    "you": "Pharah"
+    "name": "Pharah",
+    "score": 0
   }
 ]
 `;
@@ -93,16 +93,16 @@ Array [
 exports[`undersight getTopScores should calculate scores 1`] = `
 Array [
   Object {
-    "score": 3,
-    "you": "Soldier: 76"
+    "name": "Soldier: 76",
+    "score": 3
   },
   Object {
-    "score": 3,
-    "you": "Reaper"
+    "name": "Reaper",
+    "score": 3
   },
   Object {
-    "score": 0,
-    "you": "Pharah"
+    "name": "Pharah",
+    "score": 0
   }
 ]
 `;
@@ -110,16 +110,16 @@ Array [
 exports[`undersight getTopScores should calculate scores 2`] = `
 Array [
   Object {
-    "score": 3,
-    "you": "Pharah"
+    "name": "Pharah",
+    "score": 3
   },
   Object {
-    "score": 0,
-    "you": "Soldier: 76"
+    "name": "Soldier: 76",
+    "score": 0
   },
   Object {
-    "score": 0,
-    "you": "Reaper"
+    "name": "Reaper",
+    "score": 0
   }
 ]
 `;
@@ -127,16 +127,16 @@ Array [
 exports[`undersight getTopScores should calculate scores 3`] = `
 Array [
   Object {
-    "score": 3,
-    "you": "Reaper"
+    "name": "Reaper",
+    "score": 3
   },
   Object {
-    "score": 0,
-    "you": "Soldier: 76"
+    "name": "Soldier: 76",
+    "score": 0
   },
   Object {
-    "score": -3,
-    "you": "Pharah"
+    "name": "Pharah",
+    "score": -3
   }
 ]
 `;
@@ -144,16 +144,16 @@ Array [
 exports[`undersight getTopScores should calculate scores 4`] = `
 Array [
   Object {
-    "score": 2,
-    "you": "Reaper"
+    "name": "Reaper",
+    "score": 2
   },
   Object {
-    "score": 1,
-    "you": "Soldier: 76"
+    "name": "Soldier: 76",
+    "score": 1
   },
   Object {
-    "score": 0,
-    "you": "Pharah"
+    "name": "Pharah",
+    "score": 0
   }
 ]
 `;
@@ -161,101 +161,101 @@ Array [
 exports[`undersight getTopScores should calculate scores 5`] = `
 Array [
   Object {
-    "score": 2,
-    "you": "Reaper"
+    "name": "Reaper",
+    "score": 2
   },
   Object {
-    "score": 1,
-    "you": "Soldier: 76"
+    "name": "Soldier: 76",
+    "score": 1
   },
   Object {
-    "score": 0,
-    "you": "Pharah"
+    "name": "Pharah",
+    "score": 0
   }
 ]
 `;
 
-exports[`undersight getTopThree should get the top three counters to a team 1`] = `
+exports[`undersight getTopFour should get the top three counters to a team 1`] = `
 Array [
   Object {
-    "score": 3,
-    "you": "Soldier: 76"
+    "name": "Soldier: 76",
+    "score": 3
   },
   Object {
-    "score": 3,
-    "you": "Reaper"
+    "name": "Reaper",
+    "score": 3
   },
   Object {
-    "score": 0,
-    "you": "Pharah"
+    "name": "Pharah",
+    "score": 0
   }
 ]
 `;
 
-exports[`undersight getTopThree should get the top three counters to a team 2`] = `
+exports[`undersight getTopFour should get the top three counters to a team 2`] = `
 Array [
   Object {
-    "score": 3,
-    "you": "Pharah"
+    "name": "Pharah",
+    "score": 3
   },
   Object {
-    "score": 0,
-    "you": "Soldier: 76"
+    "name": "Soldier: 76",
+    "score": 0
   },
   Object {
-    "score": 0,
-    "you": "Reaper"
+    "name": "Reaper",
+    "score": 0
   }
 ]
 `;
 
-exports[`undersight getTopThree should get the top three counters to a team 3`] = `
+exports[`undersight getTopFour should get the top three counters to a team 3`] = `
 Array [
   Object {
-    "score": 3,
-    "you": "Reaper"
+    "name": "Reaper",
+    "score": 3
   },
   Object {
-    "score": 0,
-    "you": "Soldier: 76"
+    "name": "Soldier: 76",
+    "score": 0
   },
   Object {
-    "score": -3,
-    "you": "Pharah"
+    "name": "Pharah",
+    "score": -3
   }
 ]
 `;
 
-exports[`undersight getTopThree should get the top three counters to a team 4`] = `
+exports[`undersight getTopFour should get the top three counters to a team 4`] = `
 Array [
   Object {
-    "score": 2,
-    "you": "Reaper"
+    "name": "Reaper",
+    "score": 2
   },
   Object {
-    "score": 1,
-    "you": "Soldier: 76"
+    "name": "Soldier: 76",
+    "score": 1
   },
   Object {
-    "score": 0,
-    "you": "Pharah"
+    "name": "Pharah",
+    "score": 0
   }
 ]
 `;
 
-exports[`undersight getTopThree should get the top three counters to a team 5`] = `
+exports[`undersight getTopFour should get the top three counters to a team 5`] = `
 Array [
   Object {
-    "score": 2,
-    "you": "Reaper"
+    "name": "Reaper",
+    "score": 2
   },
   Object {
-    "score": 1,
-    "you": "Soldier: 76"
+    "name": "Soldier: 76",
+    "score": 1
   },
   Object {
-    "score": 0,
-    "you": "Pharah"
+    "name": "Pharah",
+    "score": 0
   }
 ]
 `;
