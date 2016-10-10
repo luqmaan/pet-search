@@ -26,7 +26,7 @@
   },
   {
     "enemy": "Ana",
-    "you": "D. Va",
+    "you": "D.Va",
     "score": 1
   },
   {
@@ -156,7 +156,7 @@
   },
   {
     "enemy": "Bastion",
-    "you": "D. Va",
+    "you": "D.Va",
     "score": 1
   },
   {
@@ -220,113 +220,113 @@
     "score": 2
   },
   {
-    "enemy": "D. Va",
+    "enemy": "D.Va",
     "you": "Hanzo",
     "score": -2
   },
   {
-    "enemy": "D. Va",
+    "enemy": "D.Va",
     "you": "Mercy",
     "score": -2
   },
   {
-    "enemy": "D. Va",
+    "enemy": "D.Va",
     "you": "Symmetra",
     "score": -2
   },
   {
-    "enemy": "D. Va",
+    "enemy": "D.Va",
     "you": "Ana",
     "score": -1
   },
   {
-    "enemy": "D. Va",
+    "enemy": "D.Va",
     "you": "Bastion",
     "score": -1
   },
   {
-    "enemy": "D. Va",
+    "enemy": "D.Va",
     "you": "Lúcio",
     "score": -1
   },
   {
-    "enemy": "D. Va",
+    "enemy": "D.Va",
     "you": "Torbjörn",
     "score": -1
   },
   {
-    "enemy": "D. Va",
+    "enemy": "D.Va",
     "you": "Widowmaker",
     "score": -1
   },
   {
-    "enemy": "D. Va",
+    "enemy": "D.Va",
     "you": "Winston",
     "score": -1
   },
   {
-    "enemy": "D. Va",
-    "you": "D. Va",
+    "enemy": "D.Va",
+    "you": "D.Va",
     "score": 0
   },
   {
-    "enemy": "D. Va",
+    "enemy": "D.Va",
     "you": "Genji",
     "score": 0,
     "Questions": "Not sure who wins"
   },
   {
-    "enemy": "D. Va",
+    "enemy": "D.Va",
     "you": "Soldier: 76",
     "score": 0
   },
   {
-    "enemy": "D. Va",
+    "enemy": "D.Va",
     "you": "Junkrat",
     "score": 1
   },
   {
-    "enemy": "D. Va",
+    "enemy": "D.Va",
     "you": "McCree",
     "score": 1
   },
   {
-    "enemy": "D. Va",
+    "enemy": "D.Va",
     "you": "Pharah",
     "score": 1
   },
   {
-    "enemy": "D. Va",
+    "enemy": "D.Va",
     "you": "Reaper",
     "score": 1
   },
   {
-    "enemy": "D. Va",
+    "enemy": "D.Va",
     "you": "Reinhardt",
     "score": 1
   },
   {
-    "enemy": "D. Va",
+    "enemy": "D.Va",
     "you": "Zarya",
     "score": 1
   },
   {
-    "enemy": "D. Va",
+    "enemy": "D.Va",
     "you": "Zenyatta",
     "score": 1
   },
   {
-    "enemy": "D. Va",
+    "enemy": "D.Va",
     "you": "Mei",
     "score": 2
   },
   {
-    "enemy": "D. Va",
+    "enemy": "D.Va",
     "you": "Roadhog",
     "score": 2
   },
   {
-    "enemy": "D. Va",
+    "enemy": "D.Va",
     "you": "Tracer",
     "score": 2
   },
@@ -377,7 +377,7 @@
   },
   {
     "enemy": "Genji",
-    "you": "D. Va",
+    "you": "D.Va",
     "score": 0,
     "Questions": "Not sure"
   },
@@ -524,7 +524,7 @@
   },
   {
     "enemy": "Hanzo",
-    "you": "D. Va",
+    "you": "D.Va",
     "score": 2
   },
   {
@@ -589,7 +589,7 @@
   },
   {
     "enemy": "Junkrat",
-    "you": "D. Va",
+    "you": "D.Va",
     "score": -1
   },
   {
@@ -684,7 +684,7 @@
   },
   {
     "enemy": "Lúcio",
-    "you": "D. Va",
+    "you": "D.Va",
     "score": 1
   },
   {
@@ -799,7 +799,7 @@
   },
   {
     "enemy": "McCree",
-    "you": "D. Va",
+    "you": "D.Va",
     "score": -1
   },
   {
@@ -884,7 +884,7 @@
   },
   {
     "enemy": "Mei",
-    "you": "D. Va",
+    "you": "D.Va",
     "score": -2
   },
   {
@@ -1084,7 +1084,7 @@
   },
   {
     "enemy": "Mercy",
-    "you": "D. Va",
+    "you": "D.Va",
     "score": 2
   },
   {
@@ -1164,7 +1164,7 @@
   },
   {
     "enemy": "Pharah",
-    "you": "D. Va",
+    "you": "D.Va",
     "score": 1
   },
   {
@@ -1289,7 +1289,7 @@
   },
   {
     "enemy": "Reaper",
-    "you": "D. Va",
+    "you": "D.Va",
     "score": 1
   },
   {
@@ -1329,7 +1329,7 @@
   },
   {
     "enemy": "Reinhardt",
-    "you": "D. Va",
+    "you": "D.Va",
     "score": -1
   },
   {
@@ -1434,7 +1434,7 @@
   },
   {
     "enemy": "Roadhog",
-    "you": "D. Va",
+    "you": "D.Va",
     "score": -2
   },
   {
@@ -1614,7 +1614,7 @@
   },
   {
     "enemy": "Soldier: 76",
-    "you": "D. Va",
+    "you": "D.Va",
     "score": 1
   },
   {
@@ -1709,7 +1709,7 @@
   },
   {
     "enemy": "Symmetra",
-    "you": "D. Va",
+    "you": "D.Va",
     "score": 2
   },
   {
@@ -1789,7 +1789,7 @@
   },
   {
     "enemy": "Torbjörn",
-    "you": "D. Va",
+    "you": "D.Va",
     "score": 1
   },
   {
@@ -1884,7 +1884,7 @@
   },
   {
     "enemy": "Tracer",
-    "you": "D. Va",
+    "you": "D.Va",
     "score": -2
   },
   {
@@ -2024,7 +2024,7 @@
   },
   {
     "enemy": "Widowmaker",
-    "you": "D. Va",
+    "you": "D.Va",
     "score": 1
   },
   {
@@ -2139,7 +2139,7 @@
   },
   {
     "enemy": "Winston",
-    "you": "D. Va",
+    "you": "D.Va",
     "score": 1
   },
   {
@@ -2264,7 +2264,7 @@
   },
   {
     "enemy": "Zarya",
-    "you": "D. Va",
+    "you": "D.Va",
     "score": 1
   },
   {
@@ -2314,7 +2314,7 @@
   },
   {
     "enemy": "Zenyatta",
-    "you": "D. Va",
+    "you": "D.Va",
     "score": -1
   },
   {

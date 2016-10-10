@@ -2,6 +2,7 @@ import sum from 'lodash/sum';
 import map from 'lodash/map';
 import sortBy from 'lodash/sortBy';
 import take from 'lodash/take';
+import head from 'lodash/head';
 import allCountersJSON from './counters.json';
 import rolesJSON from './roles.json';
 
@@ -22,13 +23,27 @@ function getTopThree(counters, enemyPicks) {
 }
 
 function getHeroCounters(counters, enemy) {
-  const scores = getTopThree(counters, [enemy]);
+  const scores = getTopScores(counters, [enemy]);
   return take(scores, 2);
 }
 
-function getCategoryPicks(counters, enemyPicks, roles) {
-  const scores = getTopThree(counters, [enemy]);
-  return take(scores, 2);
+function getRole(heroName, roles) {
+  const matchingRole = roles.find((role) => role.name === heroName);
+  return matchingRole.role;
+}
+
+function getRolePicks(counters, enemyPicks, roles, role) {
+  const countersWithRole = counters.filter((counter) => getRole(counter.you, roles) === role);
+  return getTopScores(countersWithRole, enemyPicks);
+}
+
+function getAllRolePicks(counters, enemyPicks, roles) {
+  return {
+    Offense: take(getRolePicks(counters, enemyPicks, roles, 'Offense'), 1),
+    Defense: take(getRolePicks(counters, enemyPicks, roles, 'Defense'), 1),
+    Tank: take(getRolePicks(counters, enemyPicks, roles, 'Tank'), 1),
+    Support: take(getRolePicks(counters, enemyPicks, roles, 'Support'), 1),
+  }
 }
 
 const countersJSON = allCountersJSON.filter((counter) => (
@@ -71,9 +86,10 @@ describe('undersight', () => {
     });
   });
 
-  // describe('getCategoryPicks', () => {
-  //   it('should get picks for each category', () => {
-  //     expect(getCategoryPicks(countersJSON, ['Pharah', 'Pharah', 'Pharah'])).toMatchSnapshot();
-  //   });
-  // });
+  describe('getAllRolePicks', () => {
+    it('should get picks for each category', () => {
+      expect(getAllRolePicks(allCountersJSON, ['Pharah', 'Pharah', 'Pharah'], rolesJSON)).toMatchSnapshot();
+      expect(getAllRolePicks(allCountersJSON, ['Pharah', 'Pharah', 'Pharah', 'Zenyatta', 'Zenyatta', 'Zenyatta'], rolesJSON)).toMatchSnapshot();
+    });
+  });
 });

@@ -1,3 +1,61 @@
+exports[`undersight getAllRolePicks should get picks for each category 1`] = `
+Object {
+  "Defense": Array [
+    Object {
+      "score": 6,
+      "you": "Hanzo"
+    }
+  ],
+  "Offense": Array [
+    Object {
+      "score": 6,
+      "you": "McCree"
+    }
+  ],
+  "Support": Array [
+    Object {
+      "score": 3,
+      "you": "Ana"
+    }
+  ],
+  "Tank": Array [
+    Object {
+      "score": 3,
+      "you": "Roadhog"
+    }
+  ]
+}
+`;
+
+exports[`undersight getAllRolePicks should get picks for each category 2`] = `
+Object {
+  "Defense": Array [
+    Object {
+      "score": 9,
+      "you": "Widowmaker"
+    }
+  ],
+  "Offense": Array [
+    Object {
+      "score": 12,
+      "you": "McCree"
+    }
+  ],
+  "Support": Array [
+    Object {
+      "score": 9,
+      "you": "Ana"
+    }
+  ],
+  "Tank": Array [
+    Object {
+      "score": 6,
+      "you": "Roadhog"
+    }
+  ]
+}
+`;
+
 exports[`undersight getTopScores should calculate score for four enemy 1`] = `
 Array [
   Object {
