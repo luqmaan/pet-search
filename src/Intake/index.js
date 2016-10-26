@@ -30,7 +30,7 @@ export default function({intake}) {
       <div className="AdditionalInfo">
         {intake.name && <div className="Info"><b>Name</b>{intake.name}</div>}
         <div className="Info"><b>ID</b>{intake.animal_id}</div>
-        <div className="Info"><b>Found at</b>{intake.found_location}</div>
+        <div className="Info"><b>Found At</b>{intake.found_location}</div>
         <div className="Info"><b>Intake Type</b>{intake.intake_type}</div>
         <div className="Info"><b>Intake Condition</b>{intake.intake_condition}</div>
       </div>

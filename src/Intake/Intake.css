@@ -31,8 +31,8 @@
 }
 .Info b {
     font-weight: normal;
-    color: #bfbfbf;
-    margin-right: 5px;
+    color: #555561;
+    margin-right: 10px;
     text-decoration: none
 }
 @media (min-width: 300px) {
