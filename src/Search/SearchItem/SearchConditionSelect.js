@@ -6,7 +6,7 @@ const Conditions = [
   {label: 'is not', value: 'is_not'},
   {label: 'starts with', value: 'starts_with'},
   {label: 'ends with', value: 'ends_with'},
-  {label: 'has substring', value: 'has_substring'},
+  {label: 'contains', value: 'has_substring'},
 ];
 
 export default class SearchConditionSelect extends Component {
