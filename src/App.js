@@ -86,7 +86,14 @@ export default class App extends Component {
             <NavItem>Outcomes</NavItem>
             <NavItem>Intake Map</NavItem>
             <Space x={1} auto />
-            <NavItem>Austin Animal Center</NavItem>
+            <NavItem>
+              <a
+                href="https://www.austintexas.gov/department/aac"
+                style={{'text-decoration': 'none'}}
+              >
+                Austin Animal Center
+              </a>
+            </NavItem>
           </Toolbar>
         </div>
         <div className="Content">
